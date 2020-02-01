@@ -1,0 +1,1 @@
+Keeping all my very common scripts as task templates, just for myself, seems quite convenient?

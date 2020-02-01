@@ -1,0 +1,49 @@
+{
+    "identifier": "kall.my-scripts",
+    "name": "my-scripts",
+    "vendor": "kall",
+    "description": "Just a few scripts I always need",
+    "version": "1.0",
+    "categories": ["tasks"],
+    
+    "entitlements": {
+        "process": true
+    },
+    "taskTemplates": {
+        "webserver": {
+            "name": "Netlify Dev",
+            "description": "Run Netlify Dev",
+            "actions": ["run"],
+            "task": {
+                "command": "$ExtensionFolder/netlify-dev.sh",
+                "args": [
+                ],
+                "env": {
+                    "PORT": "$(Config:example.port)",
+                },
+                "persistent": false,
+                "autosaveEditors": false
+            },
+            "config": [
+                {
+                    "key": "example.port",
+                    "title": "Port",
+                    "type": "number",
+                    "placeholder": "8000",
+                    "min": 1,
+                    "max": 65535
+                },
+            ]
+        },
+         "format": {
+            "name": "Format with Prettier",
+            "description": "Run the format script or prettier directly",
+            "actions": ["build"],
+            "task": {
+                "command": "$ExtensionFolder/format.sh",
+                "persistent": false,
+                "autosaveEditors": true
+            },
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "extensionTemplate" : "webserver",
+  "extension" : {
+    "name" : "package-script",
+    "identifier" : "kall.packagescript"
+  },
+  "identifier" : "39E4488B-E12C-404B-AA24-518F2C03A2CC"
+}
